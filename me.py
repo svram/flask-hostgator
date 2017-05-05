@@ -10,5 +10,9 @@ def index():
 def about():
 	return 'Vikram Bahl is awesome!!'
 
+@app.route('/new')
+def new():
+	return 'something new'
+
 if __name__ == '__main__':
 	app.run(debug=True)
