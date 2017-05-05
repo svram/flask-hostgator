@@ -1,10 +1,10 @@
-from flask import Flask
+from flask import Flask, Response
 
 app = Flask(__name__)
 
 @app.route('/')
 def index():
-	resp = flask.Response('Hello world!!! :) Sir')
+	resp = Response('Hello world!!! :) Sir')
 	resp.headers['Cache-Control'] = 'no-cache'
 	return resp
 
