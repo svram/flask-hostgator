@@ -4,7 +4,9 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-	return 'Hello world!!! :) Sir'
+	resp = flask.Response('Hello world!!! :) Sir')
+	resp.headers['Cache-Control'] = 'no-cache'
+	return resp
 
 @app.route('/about')
 def about():
