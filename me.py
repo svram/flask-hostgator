@@ -4,17 +4,17 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-	resp = Response('Hello world!!! :) Sir. NEWNWEJ')
+	resp = Response('Hello world!!! :)')
 	resp.headers['Cache-Control'] = 'no-cache'
 	return resp
 
 @app.route('/about')
 def about():
-	return 'Vikram Bahl is awesome!!'
+	return 'About Page'
 
 @app.route('/new')
 def new():
-	return 'something new'
+	return 'New Page'
 
 if __name__ == '__main__':
 	app.run(debug=True)
